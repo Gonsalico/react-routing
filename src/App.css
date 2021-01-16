@@ -1,0 +1,333 @@
+/*Pagina entera*/
+.container{
+    
+    width: 100%;  
+}
+.search-message{
+    color: white;
+    padding-top: 60px;
+}
+
+/*----Cabezera HBO fija arriba------------------------------------------------------*/
+.heading{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    position: fixed;
+    align-items: baseline;
+    top: 0;
+    width: 100%;
+    height: 8%;
+    padding: 5px 25px;
+    background-color: rgb(34,36,35,0.8);
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.title{
+    display: flex;
+    color:white;
+    flex-grow: 6;
+    font-weight: bolder;
+    
+}
+
+/*Caja busqueda*/
+.container input{
+  margin: 30px;
+  display: flex;
+  align-self: flex-end;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+}
+
+.searchIcon{
+   display: flex;
+    margin-right: 60px;
+   font-size: 25px;
+}
+
+/*---Pelis mostradas-------------------------------------------------------------------------------*/
+.results-container{
+  display: flex;
+  flex-direction: row;  
+  flex-wrap: wrap;
+  justify-content: flex-start;  
+}
+
+/*Peli+info mostrada individual*/
+/*div con info+imagen*/
+.img-cont{
+    display: flex;
+    flex-direction: column;
+    }
+
+.result-item{
+  display: flex;
+  flex-direction: column;
+    margin: 15px;
+  
+}
+
+.pic-title{
+  display: flex;
+  align-self: flex-start;
+    text-transform: uppercase;
+    font-weight: lighter;
+  color:white;
+  margin-bottom: 5px;
+  font-size: 18px;
+  display: -webkit-box;
+   -webkit-line-clamp: 1; /* numero lineas mostradas */
+   -webkit-box-orient: vertical;
+  max-width: 200px;
+}
+
+.img{
+    float: left;
+  width: 200px;
+  right: 50px;
+    
+}
+
+/*Texto info pelicula debajo imagen*/
+.cuerpo{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    align-self: center;
+    color: white;
+  
+}
+
+.loading-gif{ /*gif al cargar*/
+  position: center;
+  top: 200px;
+  left: 100px;;
+  right: 10px;
+  margin: none;
+}
+
+.show{
+  display: inline-block;
+}
+
+.hide{
+  display: none;
+}
+
+.infowindow{
+  position: fixed;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  left: 25%;
+  top: 10%;
+  color: white;
+  z-index: 99 !important;
+  
+}
+
+
+
+/*------Pagina detalles-----------------------------------------------------------------------*/
+
+
+/*Carta con toda info detalles*/
+.box{
+  position: fixed;
+  vertical-align: middle;  
+  max-width: 1200px;
+  max-height: 750px;
+  padding: 20px;
+  
+  color: #ffffff;
+  background-color: black;
+  border: 1px solid cyan;
+ 
+}
+
+.infoDetail{
+   display: flex;
+   align-self: flex-end; 
+   flex-direction: column;
+}
+
+.detailimg{
+    float: left;
+    max-width: 200px;
+    max-height: 300px;
+    margin: 10px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+#title{
+    display: flex;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin: 15px;
+    font-size: 32px;
+    color: white;  
+}
+
+.titleSynopsis{
+    color: gray;
+}
+
+#sinop{
+  color: white;
+}
+
+.titleScore{
+   color: gray;
+}
+
+#score{
+  color: white;
+}
+
+.titleDate{
+  color: gray;
+}
+
+#release{
+  color: white;
+}
+
+
+/*----Buttons------------------------------------------------------------------------------------*/
+
+/*Container botones back/next*/
+.nav-link-container{
+   padding-top: 100px;
+}
+
+/*Boton pasar/retroceder pagina al buscar*/
+
+.navlink {
+  background-color: transparent;
+  text-decoration: none;  
+  border: none;
+  cursor: pointer;
+  color: white; 
+  outline: none;  
+  position: relative;
+  text-align: center;
+  /*display: inline-block;*/
+  font-size: 16px;
+  left: 46.8%;
+  transition: 0.3s;
+  padding: 10px 20px;
+}
+.navlink:before{
+        content: '';
+        border-bottom: 1px solid cyan;
+        padding: 0 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        transition: 0.3s;
+}
+.navlink:hover:before{
+        width: 100%;
+        padding: 0; 
+}
+.navlink:active{
+        background: black;
+        color: white;
+        transition: none;
+}
+
+/*Hide info button*/
+.buttonHide{
+    display: flex;
+    align-content: center;
+    margin: 20px;    
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white; 
+  outline: none;  
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  left: 46.8%;
+  transition: 0.3s;
+  padding: 10px;
+}
+.button:before{
+        content: '';
+        border-bottom: 1px solid cyan;
+        padding: 0 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        transition: 0.3s;
+}
+.button:hover:before{
+        width: 100%;
+        padding: 0; 
+}
+.button:active{
+        background: black;
+        color: white;
+        transition: none;
+}
+
+/*More info button*/
+.moreinfo {
+    display: flex;
+    align-self: flex-start;
+  background-color: transparent;
+  border: none;
+  cursor:pointer;
+  color: white;
+  outline: none;   
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  transition: 0.3s;
+  
+}
+.moreinfo:before{
+    display: flex;
+        content: '';
+        border-bottom: 1px solid cyan;
+        padding: 0 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        transition: 0.3s;
+}
+.moreinfo:hover:before{
+    display: flex;
+        width: 100%;
+        padding: 0;
+}
+.moreinfo:active{
+    display: flex;
+        background: black;
+        color: white;
+        transition: none;
+}
